@@ -1,0 +1,32 @@
+idea:
+  title: 'Representation Drift Under Self-Reflection: Does Self-Critique Reshape Internal
+    States?'
+  domain: nlp
+  hypothesis: 'Self-critique in large language models induces structured shifts in
+    internal representations, particularly in the residual stream, resulting in more
+    distinct and stable reasoning subspaces. If reflection is meaningful, we expect
+    structured representation drift and improved linear separability of correct reasoning;
+    if shallow, activations remain near the original neighborhood with minimal structural
+    change.
+
+    '
+  background:
+    description: "LLMs are increasingly prompted to \u201Cthink again,\u201D critique\
+      \ themselves, and revise their answers. While self-reflection often improves\
+      \ performance, we do not know whether this improvement corresponds to meaningful\
+      \ internal representational change or merely shallow re-sampling.\nThis project\
+      \ investigates whether self-critique induces structured shifts in a model\u2019\
+      s internal representations, particularly in the residual stream.\nThe work connects\
+      \ prompting techniques with mechanistic interpretability, provides a measurable\
+      \ notion of \u201Ccognitive change\u201D in LLMs, and informs recursive self-improvement\
+      \ agents and AI research automation. Extensions could compare self-critique\
+      \ vs human critique, single vs multi-round reflection, and small vs large models.\n"
+  metadata:
+    author: Ankit Singh
+    source: IdeaHub
+    source_url: https://hypogenic.ai/ideahub/idea/nry9k6GDuRb9mgETYC5L
+    idea_id: representation_drift_under_sel_20260309_183950_008a3136
+    created_at: '2026-03-09T18:39:50.530987'
+    status: submitted
+    github_repo_name: self-critique-drift-687e-codex
+    github_repo_url: https://github.com/Hypogenic-AI/self-critique-drift-687e-codex
