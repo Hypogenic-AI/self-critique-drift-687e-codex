@@ -1,0 +1,7 @@
+\section{Conclusion}
+\label{sec:conclusion}
+We presented a controlled evaluation of self-critique through both behavior and residual-stream geometry. On balanced GSM8K and CommonsenseQA subsets with \qwen, intrinsic self-critique reduced accuracy by 22.9 absolute points relative to baseline and did not produce larger or more structured residual drift than a re-decode control.
+
+The main takeaway is that reflection prompts, in this regime, did not induce distinct internal correction dynamics; they mostly triggered a harmful second-pass rewrite process.
+
+Future work should test stronger local models (7B+), add explicit error-localization scaffolds, and analyze token-level trajectories with CKA/CCA-style subspace metrics. A scaling study across model sizes and critique sources (self, external model, and human) is a direct next step for identifying when reflection becomes genuinely state-shaping.

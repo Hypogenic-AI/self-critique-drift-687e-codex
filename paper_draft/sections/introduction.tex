@@ -1,0 +1,21 @@
+\section{Introduction}
+\label{sec:introduction}
+Prompting a language model to critique and revise its own answer is now common in research systems and production agents. The core assumption is that reflection improves reasoning quality, not only output form. Our main question is simple: does self-critique induce structured internal representation change, or does it mostly trigger another unstable decode?
+
+\para{Why this matters.} If reflection truly reshapes internal states, it supports mechanistic claims about iterative reasoning and safer recursive agent loops. If it mostly re-samples outputs, then observed gains in some settings may be fragile prompt effects rather than robust internal correction. Distinguishing these regimes requires coupling output-level metrics with representation-level measurements.
+
+\para{What is missing in prior work?} Reflection literature reports mixed behavioral findings. Iterative pipelines such as Self-Refine and Reflexion often show gains in selected settings \citep{madaan2023selfrefine,shinn2023reflexion}, while other studies show that intrinsic self-correction can fail without stronger feedback or grounding \citep{huang2023llmscannot,gou2024critic,chen2024errorlocation}. In parallel, representation studies show that high-level behavior can align with low-dimensional activation structure \citep{zou2023representation,turner2023steering,zhao2024residual,arditi2024refusal}. However, few works jointly test reflection behavior and residual-stream drift under one controlled protocol.
+
+\para{Our approach.} We evaluate \qwen on balanced subsets of GSM8K and CommonsenseQA with deterministic decoding. We compare baseline answers, a re-decode control, intrinsic self-critique revision, and a small external-critique condition. We then measure per-layer residual drift from baseline to revised trajectories and test whether self-critique causes larger or more structured movement than re-decoding.
+
+\para{Quantitative preview.} Self-critique reduced accuracy from 39.6\% to 16.7\% (McNemar $p=0.0098$), while re-decoding reduced it to 25.0\%. Mean cosine drift under self-critique and re-decoding was nearly identical (0.5700 vs 0.5719), with no layer surviving FDR correction.
+
+\para{Contributions.}
+\begin{itemize}
+    \item We propose a unified protocol that pairs reflection behavior with residual-stream drift analysis on the same examples.
+    \item We conduct a controlled comparison between intrinsic self-critique and non-critique re-decoding to isolate second-pass effects.
+    \item We provide statistical evidence that, in this model-task-prompt regime, self-critique does not yield unique structured drift and instead degrades performance.
+    \item We complement headline metrics with transition counts, layer-wise tests, and probe diagnostics that expose underpowered correction separability.
+\end{itemize}
+
+The rest of the paper reviews related work (\secref{sec:related}), details the protocol (\secref{sec:method}), reports results (\secref{sec:results}), and discusses limitations and implications (\secref{sec:discussion}).

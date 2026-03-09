@@ -1,0 +1,27 @@
+{
+  "success": true,
+  "stages": {
+    "resource_finder": {
+      "success": true,
+      "completion_marker": "/workspaces/self-critique-drift-687e-codex/.resource_finder_complete",
+      "outputs": {
+        "literature_review": "/workspaces/self-critique-drift-687e-codex/literature_review.md",
+        "resources_catalog": "/workspaces/self-critique-drift-687e-codex/resources.md",
+        "papers_dir": "/workspaces/self-critique-drift-687e-codex/papers",
+        "datasets_dir": "/workspaces/self-critique-drift-687e-codex/datasets",
+        "code_dir": "/workspaces/self-critique-drift-687e-codex/code"
+      },
+      "log_file": "/workspaces/self-critique-drift-687e-codex/logs/resource_finder_codex.log",
+      "transcript_file": "/workspaces/self-critique-drift-687e-codex/logs/resource_finder_codex_transcript.jsonl",
+      "elapsed_time": 593.0377948284149
+    },
+    "experiment_runner": {
+      "success": true,
+      "return_code": 0,
+      "elapsed_time": 2620.9733352661133,
+      "log_file": "/workspaces/self-critique-drift-687e-codex/logs/execution_codex.log",
+      "transcript_file": "/workspaces/self-critique-drift-687e-codex/logs/execution_codex_transcript.jsonl"
+    }
+  },
+  "work_dir": "/workspaces/self-critique-drift-687e-codex"
+}

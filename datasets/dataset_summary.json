@@ -1,0 +1,41 @@
+[
+  {
+    "dataset": "gsm8k",
+    "config": "main",
+    "outdir": "datasets/gsm8k",
+    "splits": {
+      "train": 7473,
+      "test": 1319
+    },
+    "features": {
+      "train": "{'question': Value('string'), 'answer': Value('string')}",
+      "test": "{'question': Value('string'), 'answer': Value('string')}"
+    }
+  },
+  {
+    "dataset": "commonsense_qa",
+    "config": null,
+    "outdir": "datasets/commonsense_qa",
+    "splits": {
+      "train": 9741,
+      "validation": 1221,
+      "test": 1140
+    },
+    "features": {
+      "train": "{'id': Value('string'), 'question': Value('string'), 'question_concept': Value('string'), 'choices': {'label': List(Value('string')), 'text': List(Value('string'))}, 'answerKey': Value('string')}",
+      "validation": "{'id': Value('string'), 'question': Value('string'), 'question_concept': Value('string'), 'choices': {'label': List(Value('string')), 'text': List(Value('string'))}, 'answerKey': Value('string')}",
+      "test": "{'id': Value('string'), 'question': Value('string'), 'question_concept': Value('string'), 'choices': {'label': List(Value('string')), 'text': List(Value('string'))}, 'answerKey': Value('string')}"
+    }
+  },
+  {
+    "dataset": "truthful_qa",
+    "config": "multiple_choice",
+    "outdir": "datasets/truthful_qa_multiple_choice",
+    "splits": {
+      "validation": 817
+    },
+    "features": {
+      "validation": "{'question': Value('string'), 'mc1_targets': {'choices': List(Value('string')), 'labels': List(Value('int32'))}, 'mc2_targets': {'choices': List(Value('string')), 'labels': List(Value('int32'))}}"
+    }
+  }
+]

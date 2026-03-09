@@ -1,0 +1,18 @@
+\begin{table}[t]
+\centering
+\caption{Key statistical tests comparing reflection conditions against baseline or control.}
+\label{tab:stats}
+\begin{tabular}{@{}ll@{}}
+\toprule
+Metric & Value \\
+\midrule
+Self - Baseline delta & $-0.2292$ (95\% CI: $[-0.3750,-0.0625]$) \\
+Re-decode - Baseline delta & $-0.1458$ (95\% CI: $[-0.2708,-0.0208]$) \\
+McNemar $p$ (Self vs Baseline) & 0.0098 \\
+Mean cosine drift (Self) & 0.5700 \\
+Mean cosine drift (Re-decode) & 0.5719 \\
+Paired Wilcoxon $p$ (mean drift, Self vs Re-decode) & 0.7643 \\
+Layer-wise FDR-significant differences (28 tests) & 0 \\
+\bottomrule
+\end{tabular}
+\end{table}

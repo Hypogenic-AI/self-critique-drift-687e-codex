@@ -1,0 +1,9 @@
+\section{Discussion}
+\label{sec:discussion}
+\para{What do the results imply?} In this setup, self-critique behaves more like destabilizing re-generation than structured correction. Behavioral degradation is large and statistically supported, while internal drift magnitude is almost indistinguishable from a non-critique second decode.
+
+\para{Why might this happen?} First, critique content is often generic (for example, ``double-check'' style feedback) and may fail to localize concrete reasoning errors, consistent with prior decomposition studies \citep{chen2024errorlocation}. Second, baseline GSM8K performance is near zero, suggesting model capability limits that critique prompts alone cannot overcome. Third, deterministic second-pass generation may amplify prompt-format brittleness instead of improving reasoning.
+
+\para{Limitations.} This study uses one local model, one prompt family, and a moderate sample size (48 examples). External critique is evaluated on only 16 examples. Representation analysis uses final-token layer states rather than full token trajectories, and probe analysis is heavily class-imbalanced.
+
+\para{Broader implications.} Reflection prompting should not be assumed helpful by default, especially in low-capacity or mismatched regimes. For interpretability, apparent output changes after critique do not necessarily indicate unique internal-state shaping. More reliable reflection may require explicit error localization, tool grounding, or stronger base models.

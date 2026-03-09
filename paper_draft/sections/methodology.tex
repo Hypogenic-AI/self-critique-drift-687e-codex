@@ -1,0 +1,19 @@
+\section{Methodology}
+\label{sec:method}
+\para{Problem setup.} For each question $x$ with gold label $y$, we generate answers under four conditions: baseline ($a^{(0)}$), re-decode control ($a^{(r)}$), intrinsic self-critique revision ($a^{(s)}$), and external-critique revision ($a^{(e)}$) on a subset. We evaluate both behavioral change and internal representation drift relative to baseline.
+
+\para{Datasets and sampling.} We use 24 sampled examples from GSM8K test and 24 sampled examples from CommonsenseQA validation (seed 42), yielding 48 total examples with balanced task composition. GSM8K scoring parses numeric final answers; CommonsenseQA scoring parses final option letters A--E.
+
+\para{Models and decoding.} The local model is \qwen (1.5B Instruct). External critique uses \gptfourone for 16 examples due to runtime and API cost constraints. Decoding uses temperature 0.0 and max 96 new tokens.
+
+\para{Representation extraction.} Let $\vh^{(c)}_{i,\ell}$ be the final-token residual representation for example $i$, layer $\ell$, and condition $c\in\{r,s,e\}$. We compute cosine drift from baseline
+\begin{equation}
+D^{\cos}_{i,\ell}(c)=1-\frac{\vh^{(0)}_{i,\ell}\cdot\vh^{(c)}_{i,\ell}}{\|\vh^{(0)}_{i,\ell}\|\,\|\vh^{(c)}_{i,\ell}\|},
+\end{equation}
+and L2 drift $D^{\ell_2}_{i,\ell}(c)=\|\vh^{(c)}_{i,\ell}-\vh^{(0)}_{i,\ell}\|_2$.
+
+\para{Statistical analysis.} We report accuracy deltas with bootstrap 95\% CIs, McNemar tests for paired correctness changes, and paired Wilcoxon signed-rank tests for layer-wise drift differences between self-critique and re-decode, corrected with Benjamini--Hochberg FDR across 28 layers.
+
+\para{Probe analysis.} We train logistic-regression probes on drift profiles to classify whether initially incorrect examples are corrected after self-critique. Because only 2 of 29 probe examples are positive, we treat probe metrics as diagnostic rather than confirmatory.
+
+\para{Implementation details.} We run Python 3.12.8 with torch 2.10.0+cu128, transformers 5.3.0, datasets 4.6.1, scikit-learn 1.8.0, scipy 1.17.1, and statsmodels 0.14.6. Experiments were executed on two RTX 3090 GPUs with mixed-precision autocast and sequential generation, taking about 13 minutes for the main 48-example run.

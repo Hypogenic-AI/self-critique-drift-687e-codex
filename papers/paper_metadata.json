@@ -1,0 +1,98 @@
+{
+  "2303.17651": {
+    "title": "Self-Refine: Iterative Refinement with Self-Feedback",
+    "year": 2023,
+    "authors": "Aman Madaan, Niket Tandon, Prakhar Gupta, Skyler Hallinan, Luyu Gao, Sarah Wiegreffe, Uri Alon, Nouha Dziri, Shrimai Prabhumoye, Yiming Yang, Shashank Gupta, Bodhisattwa Prasad Majumder, Katherine Hermann, Sean Welleck, Amir Yazdanbakhsh, Peter Clark",
+    "summary": "Like humans, large language models (LLMs) do not always generate the best output on their first try. Motivated by how humans refine their written text, we introduce Self-Refine, an approach for improving initial outputs from LLMs through iterative feedback and refinement. The main idea is to generate an initial output using an LLMs; then, the same LLMs provides feedback for its output and uses it to refine itself, iteratively. Self-Refine does not require any supervised training data, additional training, or reinforcement learning, and instead uses a single LLM as the generator, refiner, and feedback provider. We evaluate Self-Refine across 7 diverse tasks, ranging from dialog response generation to mathematical reasoning, using state-of-the-art (GPT-3.5, ChatGPT, and GPT-4) LLMs. Across all evaluated tasks, outputs generated with Self-Refine are preferred by humans and automatic metrics over those generated with the same LLM using conventional one-step generation, improving by ~20% absolute on average in task performance. Our work demonstrates that even state-of-the-art LLMs like GPT-4 can be further improved at test time using our simple, standalone approach.",
+    "pdf_url": "https://arxiv.org/pdf/2303.17651v2",
+    "entry_id": "http://arxiv.org/abs/2303.17651v2"
+  },
+  "2303.11366": {
+    "title": "Reflexion: Language Agents with Verbal Reinforcement Learning",
+    "year": 2023,
+    "authors": "Noah Shinn, Federico Cassano, Edward Berman, Ashwin Gopinath, Karthik Narasimhan, Shunyu Yao",
+    "summary": "Large language models (LLMs) have been increasingly used to interact with external environments (e.g., games, compilers, APIs) as goal-driven agents. However, it remains challenging for these language agents to quickly and efficiently learn from trial-and-error as traditional reinforcement learning methods require extensive training samples and expensive model fine-tuning. We propose Reflexion, a novel framework to reinforce language agents not by updating weights, but instead through linguistic feedback. Concretely, Reflexion agents verbally reflect on task feedback signals, then maintain their own reflective text in an episodic memory buffer to induce better decision-making in subsequent trials. Reflexion is flexible enough to incorporate various types (scalar values or free-form language) and sources (external or internally simulated) of feedback signals, and obtains significant improvements over a baseline agent across diverse tasks (sequential decision-making, coding, language reasoning). For example, Reflexion achieves a 91% pass@1 accuracy on the HumanEval coding benchmark, surpassing the previous state-of-the-art GPT-4 that achieves 80%. We also conduct ablation and analysis studies using different feedback signals, feedback incorporation methods, and agent types, and provide insights into how they affect performance.",
+    "pdf_url": "https://arxiv.org/pdf/2303.11366v4",
+    "entry_id": "http://arxiv.org/abs/2303.11366v4"
+  },
+  "2305.11738": {
+    "title": "CRITIC: Large Language Models Can Self-Correct with Tool-Interactive Critiquing",
+    "year": 2023,
+    "authors": "Zhibin Gou, Zhihong Shao, Yeyun Gong, Yelong Shen, Yujiu Yang, Nan Duan, Weizhu Chen",
+    "summary": "Recent developments in large language models (LLMs) have been impressive. However, these models sometimes show inconsistencies and problematic behavior, such as hallucinating facts, generating flawed code, or creating offensive and toxic content. Unlike these models, humans typically utilize external tools to cross-check and refine their initial content, like using a search engine for fact-checking, or a code interpreter for debugging. Inspired by this observation, we introduce a framework called CRITIC that allows LLMs, which are essentially \"black boxes\" to validate and progressively amend their own outputs in a manner similar to human interaction with tools. More specifically, starting with an initial output, CRITIC interacts with appropriate tools to evaluate certain aspects of the text, and then revises the output based on the feedback obtained during this validation process. Comprehensive evaluations involving free-form question answering, mathematical program synthesis, and toxicity reduction demonstrate that CRITIC consistently enhances the performance of LLMs. Meanwhile, our research highlights the crucial importance of external feedback in promoting the ongoing self-improvement of LLMs.",
+    "pdf_url": "https://arxiv.org/pdf/2305.11738v4",
+    "entry_id": "http://arxiv.org/abs/2305.11738v4"
+  },
+  "2310.01798": {
+    "title": "Large Language Models Cannot Self-Correct Reasoning Yet",
+    "year": 2023,
+    "authors": "Jie Huang, Xinyun Chen, Swaroop Mishra, Huaixiu Steven Zheng, Adams Wei Yu, Xinying Song, Denny Zhou",
+    "summary": "Large Language Models (LLMs) have emerged as a groundbreaking technology with their unparalleled text generation capabilities across various applications. Nevertheless, concerns persist regarding the accuracy and appropriateness of their generated content. A contemporary methodology, self-correction, has been proposed as a remedy to these issues. Building upon this premise, this paper critically examines the role and efficacy of self-correction within LLMs, shedding light on its true potential and limitations. Central to our investigation is the notion of intrinsic self-correction, whereby an LLM attempts to correct its initial responses based solely on its inherent capabilities, without the crutch of external feedback. In the context of reasoning, our research indicates that LLMs struggle to self-correct their responses without external feedback, and at times, their performance even degrades after self-correction. Drawing from these insights, we offer suggestions for future research and practical applications in this field.",
+    "pdf_url": "https://arxiv.org/pdf/2310.01798v2",
+    "entry_id": "http://arxiv.org/abs/2310.01798v2"
+  },
+  "2310.01405": {
+    "title": "Representation Engineering: A Top-Down Approach to AI Transparency",
+    "year": 2023,
+    "authors": "Andy Zou, Long Phan, Sarah Chen, James Campbell, Phillip Guo, Richard Ren, Alexander Pan, Xuwang Yin, Mantas Mazeika, Ann-Kathrin Dombrowski, Shashwat Goel, Nathaniel Li, Michael J. Byun, Zifan Wang, Alex Mallen, Steven Basart, Sanmi Koyejo, Dawn Song, Matt Fredrikson, J. Zico Kolter, Dan Hendrycks",
+    "summary": "In this paper, we identify and characterize the emerging area of representation engineering (RepE), an approach to enhancing the transparency of AI systems that draws on insights from cognitive neuroscience. RepE places population-level representations, rather than neurons or circuits, at the center of analysis, equipping us with novel methods for monitoring and manipulating high-level cognitive phenomena in deep neural networks (DNNs). We provide baselines and an initial analysis of RepE techniques, showing that they offer simple yet effective solutions for improving our understanding and control of large language models. We showcase how these methods can provide traction on a wide range of safety-relevant problems, including honesty, harmlessness, power-seeking, and more, demonstrating the promise of top-down transparency research. We hope that this work catalyzes further exploration of RepE and fosters advancements in the transparency and safety of AI systems.",
+    "pdf_url": "https://arxiv.org/pdf/2310.01405v4",
+    "entry_id": "http://arxiv.org/abs/2310.01405v4"
+  },
+  "2308.10248": {
+    "title": "Steering Language Models With Activation Engineering",
+    "year": 2023,
+    "authors": "Alexander Matt Turner, Lisa Thiergart, Gavin Leech, David Udell, Juan J. Vazquez, Ulisse Mini, Monte MacDiarmid",
+    "summary": "Prompt engineering and finetuning aim to maximize language model performance on a given metric (like toxicity reduction). However, these methods do not fully elicit a model's capabilities. To reduce this gap, we introduce activation engineering: the inference-time modification of activations in order to control (or steer) model outputs. Specifically, we introduce the Activation Addition (ActAdd) technique, which contrasts the intermediate activations on prompt pairs (such as \"Love\" versus \"Hate\") to compute a steering vector (Subramani et al. 2022). By tactically adding in e.g. the \"Love\" - \"Hate\" steering vector during the forward pass, we achieve SOTA on negative-to-positive sentiment shift and detoxification using models including LLaMA-3 and OPT. ActAdd yields inference-time control over high-level output properties (like topic and sentiment) while preserving performance on off-target tasks. ActAdd is lightweight: it does not require any machine optimization and works with a single pair of data points, which enables rapid iteration over steering. ActAdd demonstrates the power of activation engineering.",
+    "pdf_url": "https://arxiv.org/pdf/2308.10248v5",
+    "entry_id": "http://arxiv.org/abs/2308.10248v5"
+  },
+  "2304.00740": {
+    "title": "Inspecting and Editing Knowledge Representations in Language Models",
+    "year": 2023,
+    "authors": "Evan Hernandez, Belinda Z. Li, Jacob Andreas",
+    "summary": "Neural language models (LMs) represent facts about the world described by text. Sometimes these facts derive from training data (in most LMs, a representation of the word \"banana\" encodes the fact that bananas are fruits). Sometimes facts derive from input text itself (a representation of the sentence \"I poured out the bottle\" encodes the fact that the bottle became empty). We describe REMEDI, a method for learning to map statements in natural language to fact encodings in an LM's internal representation system. REMEDI encodings can be used as knowledge editors: when added to LM hidden representations, they modify downstream generation to be consistent with new facts. REMEDI encodings may also be used as probes: when compared to LM representations, they reveal which properties LMs already attribute to mentioned entities, in some cases making it possible to predict when LMs will generate outputs that conflict with background knowledge or input text. REMEDI thus links work on probing, prompting, and LM editing, and offers steps toward general tools for fine-grained inspection and control of knowledge in LMs.",
+    "pdf_url": "https://arxiv.org/pdf/2304.00740v3",
+    "entry_id": "http://arxiv.org/abs/2304.00740v3"
+  },
+  "2406.15673": {
+    "title": "Large Language Models have Intrinsic Self-Correction Ability",
+    "year": 2024,
+    "authors": "Dancheng Liu, Amir Nassereldine, Ziming Yang, Chenhui Xu, Yuting Hu, Jiajie Li, Utkarsh Kumar, Changjae Lee, Ruiyang Qin, Yiyu Shi, Jinjun Xiong",
+    "summary": "Large language models (LLMs) have attracted significant attention for their exceptional abilities in various natural language processing tasks, but they suffer from hallucinations that will cause performance degradation. One promising solution to improve the LLMs' performance is to ask LLMs to revise their answer after generation, a technique known as self-correction. Among the two types of self-correction, intrinsic self-correction is considered a promising direction because it does not utilize external knowledge. However, recent works doubt the validity of LLM's ability to conduct intrinsic self-correction. In this paper, we present a novel perspective on the intrinsic self-correction capabilities of LLMs through theoretical analyses and empirical experiments. In addition, we identify two critical factors for successful self-correction: zero temperature and fair prompts. Leveraging these factors, we demonstrate that intrinsic self-correction ability is exhibited across multiple existing LLMs. Our findings offer insights into the fundamental theories underlying the self-correction behavior of LLMs and remark on the importance of unbiased prompts and zero temperature settings in harnessing their full potential.",
+    "pdf_url": "https://arxiv.org/pdf/2406.15673v2",
+    "entry_id": "http://arxiv.org/abs/2406.15673v2"
+  },
+  "2410.16090": {
+    "title": "Analysing the Residual Stream of Language Models Under Knowledge Conflicts",
+    "year": 2024,
+    "authors": "Yu Zhao, Xiaotang Du, Giwon Hong, Aryo Pradipta Gema, Alessio Devoto, Hongru Wang, Xuanli He, Kam-Fai Wong, Pasquale Minervini",
+    "summary": "Large language models (LLMs) can store a significant amount of factual knowledge in their parameters. However, their parametric knowledge may conflict with the information provided in the context. Such conflicts can lead to undesirable model behaviour, such as reliance on outdated or incorrect information. In this work, we investigate whether LLMs can identify knowledge conflicts and whether it is possible to know which source of knowledge the model will rely on by analysing the residual stream of the LLM. Through probing tasks, we find that LLMs can internally register the signal of knowledge conflict in the residual stream, which can be accurately detected by probing the intermediate model activations. This allows us to detect conflicts within the residual stream before generating the answers without modifying the input or model parameters. Moreover, we find that the residual stream shows significantly different patterns when the model relies on contextual knowledge versus parametric knowledge to resolve conflicts. This pattern can be employed to estimate the behaviour of LLMs when conflict happens and prevent unexpected answers before producing the answers. Our analysis offers insights into how LLMs internally manage knowledge conflicts and provides a foundation for developing methods to control the knowledge selection processes.",
+    "pdf_url": "https://arxiv.org/pdf/2410.16090v2",
+    "entry_id": "http://arxiv.org/abs/2410.16090v2"
+  },
+  "2406.11717": {
+    "title": "Refusal in Language Models Is Mediated by a Single Direction",
+    "year": 2024,
+    "authors": "Andy Arditi, Oscar Obeso, Aaquib Syed, Daniel Paleka, Nina Panickssery, Wes Gurnee, Neel Nanda",
+    "summary": "Conversational large language models are fine-tuned for both instruction-following and safety, resulting in models that obey benign requests but refuse harmful ones. While this refusal behavior is widespread across chat models, its underlying mechanisms remain poorly understood. In this work, we show that refusal is mediated by a one-dimensional subspace, across 13 popular open-source chat models up to 72B parameters in size. Specifically, for each model, we find a single direction such that erasing this direction from the model's residual stream activations prevents it from refusing harmful instructions, while adding this direction elicits refusal on even harmless instructions. Leveraging this insight, we propose a novel white-box jailbreak method that surgically disables refusal with minimal effect on other capabilities. Finally, we mechanistically analyze how adversarial suffixes suppress propagation of the refusal-mediating direction. Our findings underscore the brittleness of current safety fine-tuning methods. More broadly, our work showcases how an understanding of model internals can be leveraged to develop practical methods for controlling model behavior.",
+    "pdf_url": "https://arxiv.org/pdf/2406.11717v3",
+    "entry_id": "http://arxiv.org/abs/2406.11717v3"
+  },
+  "2506.18167": {
+    "title": "Understanding Reasoning in Thinking Language Models via Steering Vectors",
+    "year": 2025,
+    "authors": "Constantin Venhoff, Iv\u00e1n Arcuschin, Philip Torr, Arthur Conmy, Neel Nanda",
+    "summary": "Recent advances in large language models (LLMs) have led to the development of thinking language models that generate extensive internal reasoning chains before producing responses. While these models achieve improved performance, controlling their reasoning processes remains challenging. This work presents a steering approach for thinking LLMs by analyzing and manipulating specific reasoning behaviors in DeepSeek-R1-Distill models. Through a systematic experiment on 500 tasks across 10 diverse categories, we identify several reasoning behaviors exhibited by thinking models, including expressing uncertainty, generating examples for hypothesis validation, and backtracking in reasoning chains. We demonstrate that these behaviors are mediated by linear directions in the model's activation space and can be controlled using steering vectors. By extracting and applying these vectors, we provide a method to modulate specific aspects of the model's reasoning process, such as its tendency to backtrack or express uncertainty. Our approach offers practical tools for steering reasoning processes in thinking models in a controlled and interpretable manner. We validate our steering method using three DeepSeek-R1-Distill models, demonstrating consistent control across different model architectures.",
+    "pdf_url": "https://arxiv.org/pdf/2506.18167v4",
+    "entry_id": "http://arxiv.org/abs/2506.18167v4"
+  },
+  "acl2024-findings-826": {
+    "title": "LLMs cannot find reasoning errors, but can correct them given the error location",
+    "year": 2024,
+    "authors": "Shengmin Jin, Xinchao Wang, Yizhou Shen, Yifan Liu, Xiangru Tang, Minghuan Li, Yichao Wang, Weiming Lu, Jiaqing Liang, Yanghua Xiao, Deqing Yang",
+    "summary": "Studies whether LLMs can find reasoning errors and shows they can often correct answers when the erroneous step location is provided.",
+    "pdf_url": "https://aclanthology.org/2024.findings-acl.826.pdf",
+    "entry_id": "https://aclanthology.org/2024.findings-acl.826/"
+  }
+}

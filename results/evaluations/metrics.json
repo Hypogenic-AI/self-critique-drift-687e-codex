@@ -1,0 +1,45 @@
+{
+  "config": {
+    "seed": 42,
+    "local_model": "Qwen/Qwen2.5-1.5B-Instruct",
+    "external_model": "gpt-4.1",
+    "n_examples_total": 48,
+    "n_gsm8k": 24,
+    "n_csqa": 24,
+    "n_external_calls": 16,
+    "max_new_tokens": 96,
+    "mixed_precision": true,
+    "device": "cuda:0"
+  },
+  "behavior": {
+    "baseline_accuracy": 0.3958333333333333,
+    "redecode_accuracy": 0.25,
+    "self_revised_accuracy": 0.16666666666666666,
+    "external_revised_accuracy": 0.25,
+    "delta_self_mean": -0.22916666666666666,
+    "delta_redecode_mean": -0.14583333333333334,
+    "delta_self_95ci": [
+      -0.375,
+      -0.0625
+    ],
+    "delta_redecode_95ci": [
+      -0.2708333333333333,
+      -0.020833333333333332
+    ],
+    "mcnemar_self_vs_baseline_stat": 6.666666666666667,
+    "mcnemar_self_vs_baseline_p": 0.009823274507519235
+  },
+  "representation": {
+    "mean_cosine_drift_self": 0.5700163282897501,
+    "mean_cosine_drift_redecode": 0.5719044557550833,
+    "drift_stability_corrected_pairwise_cosine": 0.8600171429095458
+  },
+  "probe": {
+    "n_probe_examples": 29,
+    "positive_rate": 0.06896551724137931,
+    "auc_mean": NaN,
+    "auc_std": NaN,
+    "f1_mean": 0.0,
+    "f1_std": 0.0
+  }
+}
